@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroBlogger.Introduction", "MicroBlogger.Introduction\MicroBlogger.Introduction.csproj", "{0E1AEFE5-CC21-42D4-BB3D-710764B2BB42}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroBlogger.Api", "MicroBlogger.Api\MicroBlogger.Api.csproj", "{EE7AEFB9-49E7-4AB2-AD0B-D4D1EF5A543B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{0E1AEFE5-CC21-42D4-BB3D-710764B2BB42}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E1AEFE5-CC21-42D4-BB3D-710764B2BB42}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E1AEFE5-CC21-42D4-BB3D-710764B2BB42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE7AEFB9-49E7-4AB2-AD0B-D4D1EF5A543B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE7AEFB9-49E7-4AB2-AD0B-D4D1EF5A543B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE7AEFB9-49E7-4AB2-AD0B-D4D1EF5A543B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE7AEFB9-49E7-4AB2-AD0B-D4D1EF5A543B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
