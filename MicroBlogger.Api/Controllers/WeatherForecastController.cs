@@ -1,3 +1,5 @@
+using MicroBlogger.Api.Services.Posts;
+using MicroBlogger.Api.Services.ThrowAway;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MicroBlogger.Api.Controllers;
@@ -12,10 +14,15 @@ public class WeatherForecastController : ControllerBase
     };
 
     private readonly ILogger<WeatherForecastController> _logger;
+    private readonly IIdentityGenerator _identityGenerator;
+    private readonly IPostService _postService;
 
-    public WeatherForecastController(ILogger<WeatherForecastController> logger)
+    public WeatherForecastController(ILogger<WeatherForecastController> logger, IIdentityGenerator identityGenerator,
+        IPostService postService)
     {
         _logger = logger;
+        _identityGenerator = identityGenerator;
+        _postService = postService;
     }
 
     [HttpGet]
@@ -30,8 +37,9 @@ public class WeatherForecastController : ControllerBase
     }
 
     [HttpGet("hello")]
-    public string HelloWorld(string name)
+    public async Task<string> HelloWorld(string name)
     {
-        return $"Hello {name}";
+        var postId = await _postService.CreatePostAsync("Hello world", name, true, HttpContext.RequestAborted);
+        return $"Your post id is {postId}";
     }
 }
