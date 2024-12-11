@@ -1,5 +1,4 @@
 using MicroBlogger.Api.Services.Posts;
-using MicroBlogger.Api.Services.ThrowAway;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MicroBlogger.Api.Controllers;
@@ -14,14 +13,12 @@ public class WeatherForecastController : ControllerBase
     };
 
     private readonly ILogger<WeatherForecastController> _logger;
-    private readonly IIdentityGenerator _identityGenerator;
     private readonly IPostService _postService;
 
-    public WeatherForecastController(ILogger<WeatherForecastController> logger, IIdentityGenerator identityGenerator,
+    public WeatherForecastController(ILogger<WeatherForecastController> logger,
         IPostService postService)
     {
         _logger = logger;
-        _identityGenerator = identityGenerator;
         _postService = postService;
     }
 
